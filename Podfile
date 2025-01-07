@@ -9,7 +9,7 @@ def shared_pods
     
     pod 'PKHUD', '~> 5.3.0'
     pod 'SnapKit', '~> 5.0.0'
-    pod 'Kingfisher', '~> 5.15.7'
+#    pod 'Kingfisher', '~> 5.15.7'
     pod 'MJRefresh'
 
 end

@@ -97,10 +97,7 @@
 		63793EAC2D2D0A640032720B /* RTUtilityComKit */ = {
 			isa = PBXGroup;
 			children = (
-				63ACBFFB2D2D659600AE1F71 /* RTUtilityComKitManager.swift */,
-				63793EFA2D2D0F070032720B /* Constants */,
-				63793EF92D2D0EFC0032720B /* Components */,
-				63793EDE2D2D0CF10032720B /* Extentions */,
+				637AF3AE2D2D727200C88E32 /* Classes */,
 				63793EC42D2D0C780032720B /* RTUtilityComKit.bundle */,
 				63793EAD2D2D0A640032720B /* RTUtilityComKit.h */,
 				63793EAE2D2D0A640032720B /* RTUtilityComKit.docc */,
@@ -137,6 +134,17 @@
 				63793EF72D2D0E4F0032720B /* CommonConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		637AF3AE2D2D727200C88E32 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				63793EDE2D2D0CF10032720B /* Extentions */,
+				63793EF92D2D0EFC0032720B /* Components */,
+				63793EFA2D2D0F070032720B /* Constants */,
+				63ACBFFB2D2D659600AE1F71 /* RTUtilityComKitManager.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		E67F1AD38ECEC866FFE7A689 /* Frameworks */ = {
