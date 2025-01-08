@@ -29,5 +29,3 @@ Pod::Spec.new do |s|
   # s.documentation = { :type => 'docc', :path => 'RTUtilityComKit.docc'}
 
 end
-
-Minimum Developments
