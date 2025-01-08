@@ -6,8 +6,8 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { "feng" => "1621940097@qq.com" }
   s.social_media_url   = "https://github.com/lifeng-Lee"
-  # 设置最低支持的 iOS 版本
-  s.ios.deployment_target = "12.0"
+  # 设置最低支持的 iOS 版本，注意这里版本号要与项目Minimum Deployments设置的最低版本最好一致
+  s.ios.deployment_target = "13.0" 
   s.source       = { :git => "https://github.com/lifeng-Lee/RTUtilityComKit.git", :tag => s.version.to_s }
   # 指定源代码文件： 递归包含 Classes 目录下的所有文件
   s.source_files = 'RTUtilityComKit/Classes/**/*.{h,m,swift}'
@@ -29,3 +29,5 @@ Pod::Spec.new do |s|
   # s.documentation = { :type => 'docc', :path => 'RTUtilityComKit.docc'}
 
 end
+
+Minimum Developments
