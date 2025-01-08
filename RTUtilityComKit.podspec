@@ -20,8 +20,7 @@ Pod::Spec.new do |s|
   # 'RTUtilityComKitResources' => ['RTUtilityComKit/RTUtilityComKit.bundle/**/*']
   # }
   # 添加依赖项
-  s.dependency 'PKHUD', '~> 5.3.0'
-  s.dependency 'SnapKit', '~> 5.0.0'
+  s.dependency 'SnapKit', '~> 5.6.0'
   s.dependency 'MJRefresh', '~> 3.7.6'
   # 指定 Swift 版本
   s.swift_versions = '5.0' 
