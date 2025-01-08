@@ -16,26 +16,35 @@ struct RTBouns {
 ////    static let iphoneXBottomMore_H = CGFloat((Device.size() == Size.screen5_8Inch || Device.size() == Size.screen6_1Inch || Device.size() == Size.screen6_5Inch) ? 34 : 0.01)
 
     static let tabBar_H = CGFloat(49)
+    
     static var iphoneXBottomMore_H_New: CGFloat {
         if #available(iOS 13.0, *) {
+            // iOS 13 及以上通过 UIWindowScene 获取
             let scene = UIApplication.shared.connectedScenes.first
             guard let windowScene = scene as? UIWindowScene else { return 0 }
             guard let window = windowScene.windows.first else { return 0 }
             return window.safeAreaInsets.bottom
+        } else if #available(iOS 11.0, *) {
+            // iOS 11 - 12 通过 UIApplication 获取
+            if let window = UIApplication.shared.windows.first {
+                return window.safeAreaInsets.bottom
+            }
         }
-        if #available(iOS 11.0, *) {
-            guard let window = UIApplication.shared.windows.first else { return 0 }
-            return window.safeAreaInsets.bottom
-        }
+        // iOS 11 以下系统没有 safeAreaInsets
         return 0;
     }
     
     static var statusBarHeight: CGFloat {
-        var statusBarHeight: CGFloat = 0
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-            statusBarHeight = windowScene.statusBarManager?.statusBarFrame.height ?? 0
+        if #available(iOS 13.0, *) {
+            // iOS 13 及以上通过 UIWindowScene 获取
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                return windowScene.statusBarManager?.statusBarFrame.height ?? 0
+            }
+        } else {
+            // iOS 12 及以下通过 UIApplication 的 statusBarFrame 获取
+            return UIApplication.shared.statusBarFrame.height
         }
-        return statusBarHeight
+        return 0
     }
     
     static var navigationBarHeight: CGFloat {
