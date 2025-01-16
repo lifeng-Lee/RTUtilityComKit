@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.dependency 'MJRefresh', '~> 3.7.6'
   # 指定 Swift 版本
   s.swift_versions = '5.0' 
-  ########################### 这显以上基本是必须配置的 ###############################
+  ########################### 这以上基本是必须配置的 ###############################
   
   #这个与xcode 自带生成的 RTUtilityComKit.docc 文件夹有关，文档管理，可以忽略
   # s.documentation = { :type => 'docc', :path => 'RTUtilityComKit.docc'}
